@@ -7,18 +7,84 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F2B9297288F665C007AB7B1 /* SixPackShuffleGlobalArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B9296288F665C007AB7B1 /* SixPackShuffleGlobalArrays.swift */; };
+		4F2B9299288F8DEB007AB7B1 /* SettingsTextFieldStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B9298288F8DEB007AB7B1 /* SettingsTextFieldStruct.swift */; };
+		4F2B92A9289071C5007AB7B1 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B92A8289071C5007AB7B1 /* TimerManager.swift */; };
+		4F2B92AB2890A33B007AB7B1 /* CoreSliderStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B92AA2890A33B007AB7B1 /* CoreSliderStruct.swift */; };
 		4FA7CA5B288B21010015B236 /* WorkoutApp4_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA5A288B21010015B236 /* WorkoutApp4_0App.swift */; };
-		4FA7CA5D288B21010015B236 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA5C288B21010015B236 /* ContentView.swift */; };
 		4FA7CA5F288B21020015B236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FA7CA5E288B21020015B236 /* Assets.xcassets */; };
 		4FA7CA62288B21020015B236 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FA7CA61288B21020015B236 /* Preview Assets.xcassets */; };
+		4FA7CA69288B212F0015B236 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA68288B212F0015B236 /* MainViewController.swift */; };
+		4FA7CA6B288B21440015B236 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA6A288B21440015B236 /* ProfileManager.swift */; };
+		4FA7CA6D288B21580015B236 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA6C288B21580015B236 /* FirebaseManager.swift */; };
+		4FA7CA70288B21800015B236 /* HomescreenMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA6F288B21800015B236 /* HomescreenMainView.swift */; };
+		4FA7CA72288B21990015B236 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA71288B21990015B236 /* HeaderView.swift */; };
+		4FA7CA74288B21B70015B236 /* HomescreenButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA73288B21B70015B236 /* HomescreenButtonsView.swift */; };
+		4FA7CA76288B21DF0015B236 /* NutritionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA75288B21DF0015B236 /* NutritionView.swift */; };
+		4FA7CA78288B21EE0015B236 /* CalorieChartStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA77288B21EE0015B236 /* CalorieChartStruct.swift */; };
+		4FA7CA7A288B22020015B236 /* WeightHistoryStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA79288B22020015B236 /* WeightHistoryStruct.swift */; };
+		4FA7CA7E288B224C0015B236 /* LiftingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA7D288B224C0015B236 /* LiftingView.swift */; };
+		4FA7CA82288B22870015B236 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA81288B22870015B236 /* AuthenticationView.swift */; };
+		4FA7CA84288B229B0015B236 /* CardioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA83288B229B0015B236 /* CardioView.swift */; };
+		4FA7CA86288B22AB0015B236 /* CoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA85288B22AB0015B236 /* CoreView.swift */; };
+		4FA7CA88288B22CD0015B236 /* SixPackShuffleStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA87288B22CD0015B236 /* SixPackShuffleStruct.swift */; };
+		4FA7CA8C288B23090015B236 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA8B288B23090015B236 /* FooterView.swift */; };
+		4FA7CA8E288B231D0015B236 /* TabStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA8D288B231D0015B236 /* TabStructs.swift */; };
+		4FA7CA90288B23350015B236 /* BackgroundRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA8F288B23350015B236 /* BackgroundRectangle.swift */; };
+		4FA7CA92288B23460015B236 /* FooterButtonStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA91288B23460015B236 /* FooterButtonStruct.swift */; };
+		4FA7CA95288B237E0015B236 /* TimeOfDayFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA94288B237E0015B236 /* TimeOfDayFuncs.swift */; };
+		4FA7CA97288B239F0015B236 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4FA7CA96288B239E0015B236 /* GoogleService-Info.plist */; };
+		4FA7CA9B288B24080015B236 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4FA7CA9A288B24080015B236 /* FirebaseAuth */; };
+		4FA7CA9D288B24080015B236 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4FA7CA9C288B24080015B236 /* FirebaseFirestore */; };
+		4FA7CA9F288B24080015B236 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4FA7CA9E288B24080015B236 /* FirebaseStorage */; };
+		4FA7CAA1288B35DC0015B236 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CAA0288B35DC0015B236 /* ImagePicker.swift */; };
+		4FA7CAA4288B36830015B236 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 4FA7CAA3288B36830015B236 /* SDWebImageSwiftUI */; };
+		4FA7CAA6288B3F210015B236 /* StoreProfilePic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CAA5288B3F210015B236 /* StoreProfilePic.swift */; };
+		4FA7CAA8288B43790015B236 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CAA7288B43790015B236 /* SettingsView.swift */; };
+		4FA7CAAC288B6ACE0015B236 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CAAB288B6ACE0015B236 /* LoginView.swift */; };
+		4FA7CAAE288B6D050015B236 /* AuthenticationFuncs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CAAD288B6D040015B236 /* AuthenticationFuncs.swift */; };
+		4FA7CAB0288B714E0015B236 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CAAF288B714E0015B236 /* CreateAccountView.swift */; };
+		4FA7CAB2288B77820015B236 /* SettingsButtonStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CAB1288B77820015B236 /* SettingsButtonStruct.swift */; };
+		4FA7CAB5288BBB460015B236 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 4FA7CAB4288BBB460015B236 /* SwiftUICharts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F2B9296288F665C007AB7B1 /* SixPackShuffleGlobalArrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixPackShuffleGlobalArrays.swift; sourceTree = "<group>"; };
+		4F2B9298288F8DEB007AB7B1 /* SettingsTextFieldStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextFieldStruct.swift; sourceTree = "<group>"; };
+		4F2B92A8289071C5007AB7B1 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		4F2B92AA2890A33B007AB7B1 /* CoreSliderStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreSliderStruct.swift; sourceTree = "<group>"; };
 		4FA7CA57288B21010015B236 /* WorkoutApp4.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutApp4.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FA7CA5A288B21010015B236 /* WorkoutApp4_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutApp4_0App.swift; sourceTree = "<group>"; };
-		4FA7CA5C288B21010015B236 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4FA7CA5E288B21020015B236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FA7CA61288B21020015B236 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4FA7CA68288B212F0015B236 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4FA7CA6A288B21440015B236 /* ProfileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
+		4FA7CA6C288B21580015B236 /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		4FA7CA6F288B21800015B236 /* HomescreenMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomescreenMainView.swift; sourceTree = "<group>"; };
+		4FA7CA71288B21990015B236 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		4FA7CA73288B21B70015B236 /* HomescreenButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomescreenButtonsView.swift; sourceTree = "<group>"; };
+		4FA7CA75288B21DF0015B236 /* NutritionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionView.swift; sourceTree = "<group>"; };
+		4FA7CA77288B21EE0015B236 /* CalorieChartStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalorieChartStruct.swift; sourceTree = "<group>"; };
+		4FA7CA79288B22020015B236 /* WeightHistoryStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightHistoryStruct.swift; sourceTree = "<group>"; };
+		4FA7CA7D288B224C0015B236 /* LiftingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiftingView.swift; sourceTree = "<group>"; };
+		4FA7CA81288B22870015B236 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		4FA7CA83288B229B0015B236 /* CardioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioView.swift; sourceTree = "<group>"; };
+		4FA7CA85288B22AB0015B236 /* CoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreView.swift; sourceTree = "<group>"; };
+		4FA7CA87288B22CD0015B236 /* SixPackShuffleStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixPackShuffleStruct.swift; sourceTree = "<group>"; };
+		4FA7CA8B288B23090015B236 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		4FA7CA8D288B231D0015B236 /* TabStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabStructs.swift; sourceTree = "<group>"; };
+		4FA7CA8F288B23350015B236 /* BackgroundRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundRectangle.swift; sourceTree = "<group>"; };
+		4FA7CA91288B23460015B236 /* FooterButtonStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterButtonStruct.swift; sourceTree = "<group>"; };
+		4FA7CA94288B237E0015B236 /* TimeOfDayFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDayFuncs.swift; sourceTree = "<group>"; };
+		4FA7CA96288B239E0015B236 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../WorkoutApp3.0/WorkoutApp3.0/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4FA7CA98288B23A70015B236 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4FA7CAA0288B35DC0015B236 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		4FA7CAA5288B3F210015B236 /* StoreProfilePic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreProfilePic.swift; sourceTree = "<group>"; };
+		4FA7CAA7288B43790015B236 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4FA7CAAB288B6ACE0015B236 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4FA7CAAD288B6D040015B236 /* AuthenticationFuncs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFuncs.swift; sourceTree = "<group>"; };
+		4FA7CAAF288B714E0015B236 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		4FA7CAB1288B77820015B236 /* SettingsButtonStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +92,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FA7CAA4288B36830015B236 /* SDWebImageSwiftUI in Frameworks */,
+				4FA7CA9B288B24080015B236 /* FirebaseAuth in Frameworks */,
+				4FA7CA9D288B24080015B236 /* FirebaseFirestore in Frameworks */,
+				4FA7CA9F288B24080015B236 /* FirebaseStorage in Frameworks */,
+				4FA7CAB5288BBB460015B236 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +123,14 @@
 			isa = PBXGroup;
 			children = (
 				4FA7CA5A288B21010015B236 /* WorkoutApp4_0App.swift */,
-				4FA7CA5C288B21010015B236 /* ContentView.swift */,
+				4FA7CA68288B212F0015B236 /* MainViewController.swift */,
+				4FA7CA6A288B21440015B236 /* ProfileManager.swift */,
+				4FA7CA6C288B21580015B236 /* FirebaseManager.swift */,
+				4FA7CA6E288B21720015B236 /* Views */,
 				4FA7CA5E288B21020015B236 /* Assets.xcassets */,
+				4FA7CA98288B23A70015B236 /* GoogleService-Info.plist */,
+				4FA7CA93288B23690015B236 /* Helper Functions */,
+				4FA7CA8A288B22F70015B236 /* Helper Structs */,
 				4FA7CA60288B21020015B236 /* Preview Content */,
 			);
 			path = WorkoutApp4.0;
@@ -62,9 +139,98 @@
 		4FA7CA60288B21020015B236 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				4FA7CA96288B239E0015B236 /* GoogleService-Info.plist */,
 				4FA7CA61288B21020015B236 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4FA7CA6E288B21720015B236 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4FA7CAA9288B4BC10015B236 /* Settings */,
+				4FA7CA7F288B22530015B236 /* Homescreen */,
+				4FA7CA80288B22660015B236 /* Nutrition */,
+				4FA7CA89288B22D50015B236 /* Core */,
+				4FA7CA83288B229B0015B236 /* CardioView.swift */,
+				4FA7CA7D288B224C0015B236 /* LiftingView.swift */,
+				4FA7CAAA288B6AC30015B236 /* Authentication */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4FA7CA7F288B22530015B236 /* Homescreen */ = {
+			isa = PBXGroup;
+			children = (
+				4FA7CA6F288B21800015B236 /* HomescreenMainView.swift */,
+				4FA7CA71288B21990015B236 /* HeaderView.swift */,
+				4FA7CA73288B21B70015B236 /* HomescreenButtonsView.swift */,
+				4FA7CAA5288B3F210015B236 /* StoreProfilePic.swift */,
+			);
+			path = Homescreen;
+			sourceTree = "<group>";
+		};
+		4FA7CA80288B22660015B236 /* Nutrition */ = {
+			isa = PBXGroup;
+			children = (
+				4FA7CA75288B21DF0015B236 /* NutritionView.swift */,
+				4FA7CA77288B21EE0015B236 /* CalorieChartStruct.swift */,
+				4FA7CA79288B22020015B236 /* WeightHistoryStruct.swift */,
+			);
+			path = Nutrition;
+			sourceTree = "<group>";
+		};
+		4FA7CA89288B22D50015B236 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4FA7CA85288B22AB0015B236 /* CoreView.swift */,
+				4FA7CA87288B22CD0015B236 /* SixPackShuffleStruct.swift */,
+				4F2B92AA2890A33B007AB7B1 /* CoreSliderStruct.swift */,
+				4F2B92A8289071C5007AB7B1 /* TimerManager.swift */,
+				4F2B9296288F665C007AB7B1 /* SixPackShuffleGlobalArrays.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		4FA7CA8A288B22F70015B236 /* Helper Structs */ = {
+			isa = PBXGroup;
+			children = (
+				4FA7CAA0288B35DC0015B236 /* ImagePicker.swift */,
+				4FA7CA8B288B23090015B236 /* FooterView.swift */,
+				4FA7CA91288B23460015B236 /* FooterButtonStruct.swift */,
+				4FA7CA8D288B231D0015B236 /* TabStructs.swift */,
+				4FA7CA8F288B23350015B236 /* BackgroundRectangle.swift */,
+			);
+			path = "Helper Structs";
+			sourceTree = "<group>";
+		};
+		4FA7CA93288B23690015B236 /* Helper Functions */ = {
+			isa = PBXGroup;
+			children = (
+				4FA7CA94288B237E0015B236 /* TimeOfDayFuncs.swift */,
+			);
+			path = "Helper Functions";
+			sourceTree = "<group>";
+		};
+		4FA7CAA9288B4BC10015B236 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4FA7CAA7288B43790015B236 /* SettingsView.swift */,
+				4FA7CAB1288B77820015B236 /* SettingsButtonStruct.swift */,
+				4F2B9298288F8DEB007AB7B1 /* SettingsTextFieldStruct.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		4FA7CAAA288B6AC30015B236 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				4FA7CA81288B22870015B236 /* AuthenticationView.swift */,
+				4FA7CAAB288B6ACE0015B236 /* LoginView.swift */,
+				4FA7CAAF288B714E0015B236 /* CreateAccountView.swift */,
+				4FA7CAAD288B6D040015B236 /* AuthenticationFuncs.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +249,13 @@
 			dependencies = (
 			);
 			name = WorkoutApp4.0;
+			packageProductDependencies = (
+				4FA7CA9A288B24080015B236 /* FirebaseAuth */,
+				4FA7CA9C288B24080015B236 /* FirebaseFirestore */,
+				4FA7CA9E288B24080015B236 /* FirebaseStorage */,
+				4FA7CAA3288B36830015B236 /* SDWebImageSwiftUI */,
+				4FA7CAB4288BBB460015B236 /* SwiftUICharts */,
+			);
 			productName = WorkoutApp4.0;
 			productReference = 4FA7CA57288B21010015B236 /* WorkoutApp4.0.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +284,11 @@
 				Base,
 			);
 			mainGroup = 4FA7CA4E288B21010015B236;
+			packageReferences = (
+				4FA7CA99288B24080015B236 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				4FA7CAA2288B36830015B236 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				4FA7CAB3288BBB460015B236 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 4FA7CA58288B21010015B236 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,6 +305,7 @@
 			files = (
 				4FA7CA62288B21020015B236 /* Preview Assets.xcassets in Resources */,
 				4FA7CA5F288B21020015B236 /* Assets.xcassets in Resources */,
+				4FA7CA97288B239F0015B236 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +316,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FA7CA5D288B21010015B236 /* ContentView.swift in Sources */,
+				4FA7CA74288B21B70015B236 /* HomescreenButtonsView.swift in Sources */,
+				4FA7CA90288B23350015B236 /* BackgroundRectangle.swift in Sources */,
+				4FA7CA7A288B22020015B236 /* WeightHistoryStruct.swift in Sources */,
+				4FA7CAAE288B6D050015B236 /* AuthenticationFuncs.swift in Sources */,
+				4FA7CA92288B23460015B236 /* FooterButtonStruct.swift in Sources */,
+				4F2B9299288F8DEB007AB7B1 /* SettingsTextFieldStruct.swift in Sources */,
+				4FA7CA78288B21EE0015B236 /* CalorieChartStruct.swift in Sources */,
+				4FA7CA8C288B23090015B236 /* FooterView.swift in Sources */,
+				4FA7CA69288B212F0015B236 /* MainViewController.swift in Sources */,
+				4FA7CAA1288B35DC0015B236 /* ImagePicker.swift in Sources */,
+				4FA7CAA8288B43790015B236 /* SettingsView.swift in Sources */,
+				4FA7CA70288B21800015B236 /* HomescreenMainView.swift in Sources */,
+				4FA7CA6D288B21580015B236 /* FirebaseManager.swift in Sources */,
 				4FA7CA5B288B21010015B236 /* WorkoutApp4_0App.swift in Sources */,
+				4F2B92AB2890A33B007AB7B1 /* CoreSliderStruct.swift in Sources */,
+				4FA7CAAC288B6ACE0015B236 /* LoginView.swift in Sources */,
+				4FA7CAA6288B3F210015B236 /* StoreProfilePic.swift in Sources */,
+				4FA7CA84288B229B0015B236 /* CardioView.swift in Sources */,
+				4FA7CA76288B21DF0015B236 /* NutritionView.swift in Sources */,
+				4FA7CA82288B22870015B236 /* AuthenticationView.swift in Sources */,
+				4FA7CA8E288B231D0015B236 /* TabStructs.swift in Sources */,
+				4F2B9297288F665C007AB7B1 /* SixPackShuffleGlobalArrays.swift in Sources */,
+				4F2B92A9289071C5007AB7B1 /* TimerManager.swift in Sources */,
+				4FA7CA95288B237E0015B236 /* TimeOfDayFuncs.swift in Sources */,
+				4FA7CAB0288B714E0015B236 /* CreateAccountView.swift in Sources */,
+				4FA7CA6B288B21440015B236 /* ProfileManager.swift in Sources */,
+				4FA7CA88288B22CD0015B236 /* SixPackShuffleStruct.swift in Sources */,
+				4FA7CA86288B22AB0015B236 /* CoreView.swift in Sources */,
+				4FA7CA72288B21990015B236 /* HeaderView.swift in Sources */,
+				4FA7CA7E288B224C0015B236 /* LiftingView.swift in Sources */,
+				4FA7CAB2288B77820015B236 /* SettingsButtonStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +547,61 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4FA7CA99288B24080015B236 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		4FA7CAA2288B36830015B236 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		4FA7CAB3288BBB460015B236 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4FA7CA9A288B24080015B236 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4FA7CA99288B24080015B236 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		4FA7CA9C288B24080015B236 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4FA7CA99288B24080015B236 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		4FA7CA9E288B24080015B236 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4FA7CA99288B24080015B236 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		4FA7CAA3288B36830015B236 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4FA7CAA2288B36830015B236 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		4FA7CAB4288BBB460015B236 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4FA7CAB3288BBB460015B236 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4FA7CA4F288B21010015B236 /* Project object */;
 }

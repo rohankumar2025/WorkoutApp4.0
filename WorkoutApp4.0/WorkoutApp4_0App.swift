@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct WorkoutApp4_0App: App {
+struct WorkoutApp3_0App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainViewController()
         }
     }
 }
