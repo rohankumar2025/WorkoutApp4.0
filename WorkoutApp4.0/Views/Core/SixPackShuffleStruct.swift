@@ -7,35 +7,30 @@
 
 import SwiftUI
 
-
-
 struct SixPackShuffleStruct: View {
     @EnvironmentObject var profile: ProfileManager
-    @StateObject var timerManager = TimerManager((0, 0, 0, 0))
-    
-    @State var abWorkout: [String] = []
-    @State var workoutDifficulty: Double = 0
-    
-    @State var workoutFormat: (Int, Int, Int, Int) = (0, 0, 0, 0)
-    
-    func randomizeWorkout() {
-        self.abWorkout = []
-        self.abWorkout.append(lowerAbExercises.randomElement()!)
-        self.abWorkout.append(lowerAbRotationExercises.randomElement()!)
-        self.abWorkout.append(midAbExercises.randomElement()!)
-        self.abWorkout.append(midAbRotationExercises.randomElement()!)
-        self.abWorkout.append(upperAbExercises.randomElement()!)
-        self.abWorkout.append(upperAbRotationExercises.randomElement()!)
-        self.abWorkout.append(accessoryExercises.randomElement()!)
-    }
+    @EnvironmentObject var timerManager: TimerManager
+    @EnvironmentObject var workoutManager: CoreWorkoutManager
+    var animationNamespace: Namespace.ID
     
     
     var body: some View {
         VStack {
             VStack(alignment: .leading, spacing: 10) {
-                // Title
+                // Title text
                 Text("Six Pack Shuffle")
                     .font(.system(size: 30, weight: .bold, design: .rounded))
+                    .matchedGeometryEffect(id: "SixPackShuffleTitleText", in: self.animationNamespace)
+                    .onAppear {
+                        if timerManager.timerMode == .initial {
+                            // Randomizes workout initially
+                            workoutManager.randomizeWorkout()
+                            timerManager.setWorkout(workoutManager.getWorkoutFormat())
+                        }
+                    }
+                
+                // Total Time Remaining / Total Workout Time text
+                Text((timerManager.timerMode == .initial ? "Total Workout Time" : "Total Time Remaining") + ": \(organizeTimer(timerManager.totalSecondsLeft))")
                 
                 // Background Rectangle
                 ZStack {
@@ -43,10 +38,11 @@ struct SixPackShuffleStruct: View {
                     
                     // Workout Text
                     VStack {
-                        ForEach(0..<abWorkout.count, id: \.self) { i in
-                            Text("\(i+1). \(abWorkout[i])")
+                        ForEach(0..<workoutManager.abWorkout.count, id: \.self) { i in
+                            Text("\(i+1). \(workoutManager.abWorkout[i])")
                                 .font(.system(
-                                    size: timerManager.currentExercise == i+1 ? 20 : 17,
+                                    // Changes weight and size if index = currentExercise
+                                    size: timerManager.currentExercise == i+1 ? 22 : 17,
                                     weight: timerManager.currentExercise == i+1 ? .bold : .medium))
                                 .foregroundColor(.black.opacity(0.7))
                                 .frame(width: 280, alignment: .leading)
@@ -55,103 +51,36 @@ struct SixPackShuffleStruct: View {
                     }
                     .frame(height: 300, alignment: .top)
                     
-                    // Slider + Difficulty Text
-                    CoreSliderStruct(workoutDifficulty: self.$workoutDifficulty)
-                }
-                
-                
-
-                
-            }
-            
-            HStack {
-                Spacer()
-                
-                // Shuffle Button
-                SixPackShuffleButtons("shuffle") {
-                    self.randomizeWorkout()
-                    self.timerManager.setWorkout(getWorkoutFormat(self.workoutDifficulty))
-                }
-                
-                if !self.abWorkout.isEmpty {
-                    // Displays play button if workout has been shuffled
-                    // Displays pause button if workout timer is running
-                    if timerManager.timerMode != .running {
-                        SixPackShuffleButtons("play.fill") {
-                            timerManager.start()
-                        }
-                    } else {
-                        SixPackShuffleButtons("pause.fill") {
-                            timerManager.pause()
-                        }
+                    
+                    // Displays slider if workout has not started, else displays seconds
+                    Group {
+                        if timerManager.timerMode == .initial { CoreSliderStruct() } else { SecondsTimerStruct() }
                     }
+                    .offset(y: 130)
+        
                 }
                 
+                ShuffleButtonsStruct()
                 
-                
-                Spacer()
             }
-            
-            Text("Total Time: \(organizeTimer(seconds: timerManager.totalSecondsLeft))")
-                .font(.system(size: 40, weight: .bold))
-                .foregroundColor(.black.opacity(0.6))
-                .padding()
-                .background(profile.preferredTheme.opacity(0.2))
-                .cornerRadius(20)
-            
-            Text((timerManager.currentExerciseState == .working ? "Work" : "Rest") + ": \(organizeTimer(seconds: timerManager.secondsLeftInSet))")
-                .font(.system(size: 40, weight: .bold))
-                .foregroundColor(.black.opacity(0.6))
-                .padding()
-                .background(profile.preferredTheme.opacity(0.2))
-                .cornerRadius(20)
-            
-            
             
         }
         .environmentObject(profile)
-        .onAppear {
-            self.randomizeWorkout()
-            self.timerManager.setWorkout(getWorkoutFormat(self.workoutDifficulty))
-        }
+        .environmentObject(workoutManager)
+        .environmentObject(timerManager)
+        
     }
     
-    // Template struct for shuffle and play buttons
-    struct SixPackShuffleButtons: View {
-        @EnvironmentObject var profile: ProfileManager
-        private var completion: ()->()
-        private var iconName: String
-        
-        init(_ iconName: String, completion: @escaping ()->()) {
-            self.iconName = iconName
-            self.completion = completion
-        }
-        
-        var body: some View {
-            Button(action: {
-                self.completion()
-            }, label: {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 15)
-                        .frame(width: 120, height: 50)
-                        .foregroundColor(profile.preferredTheme.opacity(0.2))
-                    
-                    Image(systemName: self.iconName)
-                        .font(.system(size: 30, weight: .bold))
-                        .foregroundColor(profile.preferredTheme)
-                }
-            })
-            .padding([.leading, .trailing])
-        }
-    }
+    
     
     
     
 }
 
 struct SixPackShuffleStruct_Previews: PreviewProvider {
+    @Namespace static var namespace
     static var previews: some View {
-        SixPackShuffleStruct()
+        SixPackShuffleStruct(animationNamespace: namespace)
             .environmentObject(ProfileManager())
     }
 }

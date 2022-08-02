@@ -26,6 +26,9 @@ class ProfileManager : ObservableObject{
     @Published var weightHistory: [Double] = []
     @Published var weightHistoryDates: [String] = []
     
+    // Lifting Info
+    @Published var preferredWorkoutSplit: Int = -1
+    
     
     init() {
         // Initializes isLoggedIn
@@ -47,17 +50,17 @@ class ProfileManager : ObservableObject{
                 }
                 guard let data = snapshot?.data() else { return }
                 
-                // Assigns data values to profile variables
+                // Profile
                 self.profilePicURL = data["ProfilePicURL"] as? String ?? ""
                 self.username = data["Username"] as? String ?? ""
                 
                 
-                // Assigns data values to nutrition variables
+                // Nutrition
                 self.maintenanceCalories = data["MaintenanceCalories"] as? Int ?? 2000
                 self.weightHistory = data["WeightHistory"] as? [Double] ?? []
                 self.weightHistoryDates = data["WeightHistoryDates"] as? [String] ?? []
                 
-                // Calorie history variable
+                // Calorie History
                 if let currCaloriesHistory = data["CaloriesEatenHistory"] as? [Int] {
                     // Assigns to current data if not empty
                     self.caloriesEatenHistory = currCaloriesHistory
@@ -67,7 +70,7 @@ class ProfileManager : ObservableObject{
                     updateUserInfo(updatedField: "CaloriesEatenHistoryDates", info: self.caloriesEatenHistoryDates, infoType: [Int].self)
                 }
                 
-                // Calorie history dates variable
+                // Calorie History Dates
                 if let currCaloriesHistoryDates = data["CaloriesEatenHistoryDates"] as? [String] {
                     // Assigns to current data if not empty
                     self.caloriesEatenHistoryDates = currCaloriesHistoryDates
@@ -86,6 +89,10 @@ class ProfileManager : ObservableObject{
                     updateUserInfo(updatedField: "CaloriesEatenHistoryDates", info: self.caloriesEatenHistoryDates, infoType: [String].self)
                     updateUserInfo(updatedField: "CaloriesEatenHistory", info: self.caloriesEatenHistory, infoType: [Int].self)
                 }
+                
+                self.preferredWorkoutSplit = data["PreferredWorkoutSplit"] as? Int ?? -1
+                
+                
                 
                 // Tells app that user is logged in
                 self.isLoggedIn = true

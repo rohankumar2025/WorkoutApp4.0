@@ -24,15 +24,17 @@ struct TabButton: View {
     private var iconAnimationID: String // String used to create unique animation ID for icon (is derived from labelText)
     private var titleTextAnimationID: String // String used to create unique animation ID for titleText (is derived from labelText)
     private var tabToOpen: Tab // Tab opened by button
+    private var useSFSymbols: Bool // Determines whether to use custom graphic or SF Symbol icon
     
     // Initializes all variables
-    init(_ labelText: String, iconName: String, animationNamespace: Namespace.ID, tabToOpen: Tab) {
+    init(_ labelText: String, iconName: String, animationNamespace: Namespace.ID, tabToOpen: Tab, useSFSymbols: Bool = true) {
         self.labelText = labelText
         self.iconName = iconName
         self.animationNamespace = animationNamespace
         self.iconAnimationID = labelText.lowercased() + "Icon"
         self.titleTextAnimationID = labelText.lowercased() + "TitleText"
         self.tabToOpen = tabToOpen
+        self.useSFSymbols = useSFSymbols
     }
 
     var body: some View {
@@ -52,11 +54,21 @@ struct TabButton: View {
                     Spacer()
                     
                     // Creates SFSymbol image out of self.iconText string variable
-                    Image(systemName: self.iconName)
-                        .resizable()
-                        .frame(width: 75, height: 75)
-                        .foregroundColor(profile.preferredTheme)
-                        .matchedGeometryEffect(id: self.iconAnimationID, in: self.animationNamespace)
+                    if self.useSFSymbols {
+                        Image(systemName: self.iconName)
+                            .resizable()
+                            .frame(width: 75, height: 75)
+                            .foregroundColor(profile.preferredTheme)
+                            .matchedGeometryEffect(id: self.iconAnimationID, in: self.animationNamespace)
+                    } else {
+                        Image(self.iconName)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 100, height: 90)
+                            .matchedGeometryEffect(id: self.iconAnimationID, in: self.animationNamespace)
+                            .offset(y: 15)
+                    }
+                    
                     
                     // Draws label based on self.labelText
                     Text(self.labelText)
@@ -89,14 +101,16 @@ struct TabHeaderStruct: View {
     private var titleAnimationID: String // String used to create unique animation ID for titleText (is derived from labelText)
     private var iconAnimationID: String // String used to create unique animation ID for icon (is derived from labelText)
     private var iconName: String // String used to create SFSymbol
+    private var useSFSymbols: Bool // Determines whether to use custom graphic or SF Symbol icon
     
     // Initializes all variables
-    init(_ titleText: String, iconName: String, animationNamespace: Namespace.ID) {
+    init(_ titleText: String, iconName: String, animationNamespace: Namespace.ID, useSFSymbols: Bool = true) {
         self.titleText = titleText
         self.titleAnimationID = titleText.lowercased() + "TitleText"
         self.iconAnimationID = titleText.lowercased() + "Icon"
         self.iconName = iconName
         self.animationNamespace = animationNamespace
+        self.useSFSymbols = useSFSymbols
     }
     
     var body: some View {
@@ -108,10 +122,19 @@ struct TabHeaderStruct: View {
                 .padding()
             
             // Icon image
-            Image(systemName: self.iconName)
-                .font(.system(size: 40))
-                .foregroundColor(profile.preferredTheme)
-                .matchedGeometryEffect(id: self.iconAnimationID, in: self.animationNamespace)
+            if useSFSymbols {
+                Image(systemName: self.iconName)
+                    .font(.system(size: 40))
+                    .foregroundColor(profile.preferredTheme)
+                    .matchedGeometryEffect(id: self.iconAnimationID, in: self.animationNamespace)
+            } else {
+                Image(self.iconName)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 60, height: 60)
+                    .foregroundColor(profile.preferredTheme)
+                    .matchedGeometryEffect(id: self.iconAnimationID, in: self.animationNamespace)
+            }
             
             Spacer()
             

@@ -11,6 +11,24 @@
 		4F2B9299288F8DEB007AB7B1 /* SettingsTextFieldStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B9298288F8DEB007AB7B1 /* SettingsTextFieldStruct.swift */; };
 		4F2B92A9289071C5007AB7B1 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B92A8289071C5007AB7B1 /* TimerManager.swift */; };
 		4F2B92AB2890A33B007AB7B1 /* CoreSliderStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2B92AA2890A33B007AB7B1 /* CoreSliderStruct.swift */; };
+		4F5C9C5E2892512C00B19577 /* SecondsTimerStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C9C5D2892512C00B19577 /* SecondsTimerStruct.swift */; };
+		4F5C9C602892555400B19577 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C9C5F2892555400B19577 /* SoundManager.swift */; };
+		4F5C9C65289259D000B19577 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F5C9C64289259D000B19577 /* beep.mp3 */; };
+		4F5C9C6728925A9900B19577 /* startbeeps.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4F5C9C6628925A9900B19577 /* startbeeps.wav */; };
+		4F5C9C6A28927E0D00B19577 /* CardioTypeButtonStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C9C6928927E0D00B19577 /* CardioTypeButtonStruct.swift */; };
+		4F5C9C6C2894509900B19577 /* SixPackShuffleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C9C6B2894509900B19577 /* SixPackShuffleView.swift */; };
+		4F5C9C6E2894529A00B19577 /* CoreWorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5C9C6D2894529A00B19577 /* CoreWorkoutManager.swift */; };
+		4F6CB1A72894676D00EB6900 /* CircleLoadingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6CB1A62894676D00EB6900 /* CircleLoadingBar.swift */; };
+		4F6CB1AB2894795E00EB6900 /* ShuffleButtonsStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6CB1AA2894795E00EB6900 /* ShuffleButtonsStruct.swift */; };
+		4F6CB1BC28962CDA00EB6900 /* GifImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6CB1BB28962CDA00EB6900 /* GifImage.swift */; };
+		4F6CB1C32897334900EB6900 /* Flutter Kicks.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F6CB1BD2897334900EB6900 /* Flutter Kicks.gif */; };
+		4F6CB1CA289733C500EB6900 /* Hands Back Tucks.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F6CB1C9289733C500EB6900 /* Hands Back Tucks.gif */; };
+		4F6CB1CC289733CA00EB6900 /* Leg Raises.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F6CB1CB289733CA00EB6900 /* Leg Raises.gif */; };
+		4F6CB1CE289733EC00EB6900 /* V Ups.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F6CB1CD289733EC00EB6900 /* V Ups.gif */; };
+		4F6CB1D02897342600EB6900 /* Reverse Crunch.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F6CB1CF2897342600EB6900 /* Reverse Crunch.gif */; };
+		4F6CB1D22897347500EB6900 /* Seated Ab Circles.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F6CB1D12897347500EB6900 /* Seated Ab Circles.gif */; };
+		4F6CB1D4289734D900EB6900 /* Scissors.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F6CB1D3289734D900EB6900 /* Scissors.gif */; };
+		4F6CB1D92898BA0000EB6900 /* ChooseSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6CB1D82898BA0000EB6900 /* ChooseSplitView.swift */; };
 		4FA7CA5B288B21010015B236 /* WorkoutApp4_0App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7CA5A288B21010015B236 /* WorkoutApp4_0App.swift */; };
 		4FA7CA5F288B21020015B236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FA7CA5E288B21020015B236 /* Assets.xcassets */; };
 		4FA7CA62288B21020015B236 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FA7CA61288B21020015B236 /* Preview Assets.xcassets */; };
@@ -53,6 +71,24 @@
 		4F2B9298288F8DEB007AB7B1 /* SettingsTextFieldStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTextFieldStruct.swift; sourceTree = "<group>"; };
 		4F2B92A8289071C5007AB7B1 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		4F2B92AA2890A33B007AB7B1 /* CoreSliderStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreSliderStruct.swift; sourceTree = "<group>"; };
+		4F5C9C5D2892512C00B19577 /* SecondsTimerStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondsTimerStruct.swift; sourceTree = "<group>"; };
+		4F5C9C5F2892555400B19577 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		4F5C9C64289259D000B19577 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
+		4F5C9C6628925A9900B19577 /* startbeeps.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = startbeeps.wav; sourceTree = "<group>"; };
+		4F5C9C6928927E0D00B19577 /* CardioTypeButtonStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardioTypeButtonStruct.swift; sourceTree = "<group>"; };
+		4F5C9C6B2894509900B19577 /* SixPackShuffleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixPackShuffleView.swift; sourceTree = "<group>"; };
+		4F5C9C6D2894529A00B19577 /* CoreWorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreWorkoutManager.swift; sourceTree = "<group>"; };
+		4F6CB1A62894676D00EB6900 /* CircleLoadingBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleLoadingBar.swift; sourceTree = "<group>"; };
+		4F6CB1AA2894795E00EB6900 /* ShuffleButtonsStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleButtonsStruct.swift; sourceTree = "<group>"; };
+		4F6CB1BB28962CDA00EB6900 /* GifImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifImage.swift; sourceTree = "<group>"; };
+		4F6CB1BD2897334900EB6900 /* Flutter Kicks.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Flutter Kicks.gif"; sourceTree = "<group>"; };
+		4F6CB1C9289733C500EB6900 /* Hands Back Tucks.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Hands Back Tucks.gif"; sourceTree = "<group>"; };
+		4F6CB1CB289733CA00EB6900 /* Leg Raises.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Leg Raises.gif"; sourceTree = "<group>"; };
+		4F6CB1CD289733EC00EB6900 /* V Ups.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "V Ups.gif"; sourceTree = "<group>"; };
+		4F6CB1CF2897342600EB6900 /* Reverse Crunch.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Reverse Crunch.gif"; sourceTree = "<group>"; };
+		4F6CB1D12897347500EB6900 /* Seated Ab Circles.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Seated Ab Circles.gif"; sourceTree = "<group>"; };
+		4F6CB1D3289734D900EB6900 /* Scissors.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Scissors.gif; sourceTree = "<group>"; };
+		4F6CB1D82898BA0000EB6900 /* ChooseSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseSplitView.swift; sourceTree = "<group>"; };
 		4FA7CA57288B21010015B236 /* WorkoutApp4.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutApp4.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FA7CA5A288B21010015B236 /* WorkoutApp4_0App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutApp4_0App.swift; sourceTree = "<group>"; };
 		4FA7CA5E288B21020015B236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +139,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F5C9C61289257DA00B19577 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F6CB1AC28962BF400EB6900 /* AbWorkoutGifs */,
+				4F5C9C64289259D000B19577 /* beep.mp3 */,
+				4F5C9C6628925A9900B19577 /* startbeeps.wav */,
+				4FA7CA5E288B21020015B236 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4F5C9C6828927AEA00B19577 /* Cardio */ = {
+			isa = PBXGroup;
+			children = (
+				4FA7CA83288B229B0015B236 /* CardioView.swift */,
+				4F5C9C6928927E0D00B19577 /* CardioTypeButtonStruct.swift */,
+			);
+			path = Cardio;
+			sourceTree = "<group>";
+		};
+		4F6CB1AC28962BF400EB6900 /* AbWorkoutGifs */ = {
+			isa = PBXGroup;
+			children = (
+				4F6CB1BD2897334900EB6900 /* Flutter Kicks.gif */,
+				4F6CB1C9289733C500EB6900 /* Hands Back Tucks.gif */,
+				4F6CB1CB289733CA00EB6900 /* Leg Raises.gif */,
+				4F6CB1CD289733EC00EB6900 /* V Ups.gif */,
+				4F6CB1CF2897342600EB6900 /* Reverse Crunch.gif */,
+				4F6CB1D12897347500EB6900 /* Seated Ab Circles.gif */,
+				4F6CB1D3289734D900EB6900 /* Scissors.gif */,
+			);
+			path = AbWorkoutGifs;
+			sourceTree = "<group>";
+		};
+		4F6CB1D52898B7E600EB6900 /* Lifting */ = {
+			isa = PBXGroup;
+			children = (
+				4FA7CA7D288B224C0015B236 /* LiftingView.swift */,
+				4F6CB1D82898BA0000EB6900 /* ChooseSplitView.swift */,
+			);
+			path = Lifting;
+			sourceTree = "<group>";
+		};
 		4FA7CA4E288B21010015B236 = {
 			isa = PBXGroup;
 			children = (
@@ -127,7 +206,7 @@
 				4FA7CA6A288B21440015B236 /* ProfileManager.swift */,
 				4FA7CA6C288B21580015B236 /* FirebaseManager.swift */,
 				4FA7CA6E288B21720015B236 /* Views */,
-				4FA7CA5E288B21020015B236 /* Assets.xcassets */,
+				4F5C9C61289257DA00B19577 /* Resources */,
 				4FA7CA98288B23A70015B236 /* GoogleService-Info.plist */,
 				4FA7CA93288B23690015B236 /* Helper Functions */,
 				4FA7CA8A288B22F70015B236 /* Helper Structs */,
@@ -152,8 +231,8 @@
 				4FA7CA7F288B22530015B236 /* Homescreen */,
 				4FA7CA80288B22660015B236 /* Nutrition */,
 				4FA7CA89288B22D50015B236 /* Core */,
-				4FA7CA83288B229B0015B236 /* CardioView.swift */,
-				4FA7CA7D288B224C0015B236 /* LiftingView.swift */,
+				4F5C9C6828927AEA00B19577 /* Cardio */,
+				4F6CB1D52898B7E600EB6900 /* Lifting */,
 				4FA7CAAA288B6AC30015B236 /* Authentication */,
 			);
 			path = Views;
@@ -185,8 +264,13 @@
 			children = (
 				4FA7CA85288B22AB0015B236 /* CoreView.swift */,
 				4FA7CA87288B22CD0015B236 /* SixPackShuffleStruct.swift */,
+				4F5C9C6B2894509900B19577 /* SixPackShuffleView.swift */,
+				4F5C9C6D2894529A00B19577 /* CoreWorkoutManager.swift */,
 				4F2B92AA2890A33B007AB7B1 /* CoreSliderStruct.swift */,
+				4F6CB1AA2894795E00EB6900 /* ShuffleButtonsStruct.swift */,
+				4F6CB1A62894676D00EB6900 /* CircleLoadingBar.swift */,
 				4F2B92A8289071C5007AB7B1 /* TimerManager.swift */,
+				4F5C9C5D2892512C00B19577 /* SecondsTimerStruct.swift */,
 				4F2B9296288F665C007AB7B1 /* SixPackShuffleGlobalArrays.swift */,
 			);
 			path = Core;
@@ -197,6 +281,8 @@
 			children = (
 				4FA7CAA0288B35DC0015B236 /* ImagePicker.swift */,
 				4FA7CA8B288B23090015B236 /* FooterView.swift */,
+				4F6CB1BB28962CDA00EB6900 /* GifImage.swift */,
+				4F5C9C5F2892555400B19577 /* SoundManager.swift */,
 				4FA7CA91288B23460015B236 /* FooterButtonStruct.swift */,
 				4FA7CA8D288B231D0015B236 /* TabStructs.swift */,
 				4FA7CA8F288B23350015B236 /* BackgroundRectangle.swift */,
@@ -303,8 +389,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F6CB1CC289733CA00EB6900 /* Leg Raises.gif in Resources */,
 				4FA7CA62288B21020015B236 /* Preview Assets.xcassets in Resources */,
+				4F6CB1C32897334900EB6900 /* Flutter Kicks.gif in Resources */,
+				4F5C9C65289259D000B19577 /* beep.mp3 in Resources */,
+				4F6CB1D22897347500EB6900 /* Seated Ab Circles.gif in Resources */,
+				4F6CB1D02897342600EB6900 /* Reverse Crunch.gif in Resources */,
+				4F6CB1CA289733C500EB6900 /* Hands Back Tucks.gif in Resources */,
+				4F6CB1CE289733EC00EB6900 /* V Ups.gif in Resources */,
 				4FA7CA5F288B21020015B236 /* Assets.xcassets in Resources */,
+				4F6CB1D4289734D900EB6900 /* Scissors.gif in Resources */,
+				4F5C9C6728925A9900B19577 /* startbeeps.wav in Resources */,
 				4FA7CA97288B239F0015B236 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,23 +413,32 @@
 			files = (
 				4FA7CA74288B21B70015B236 /* HomescreenButtonsView.swift in Sources */,
 				4FA7CA90288B23350015B236 /* BackgroundRectangle.swift in Sources */,
+				4F6CB1AB2894795E00EB6900 /* ShuffleButtonsStruct.swift in Sources */,
+				4F5C9C6C2894509900B19577 /* SixPackShuffleView.swift in Sources */,
 				4FA7CA7A288B22020015B236 /* WeightHistoryStruct.swift in Sources */,
 				4FA7CAAE288B6D050015B236 /* AuthenticationFuncs.swift in Sources */,
+				4F5C9C6A28927E0D00B19577 /* CardioTypeButtonStruct.swift in Sources */,
 				4FA7CA92288B23460015B236 /* FooterButtonStruct.swift in Sources */,
+				4F6CB1BC28962CDA00EB6900 /* GifImage.swift in Sources */,
 				4F2B9299288F8DEB007AB7B1 /* SettingsTextFieldStruct.swift in Sources */,
 				4FA7CA78288B21EE0015B236 /* CalorieChartStruct.swift in Sources */,
 				4FA7CA8C288B23090015B236 /* FooterView.swift in Sources */,
+				4F5C9C6E2894529A00B19577 /* CoreWorkoutManager.swift in Sources */,
+				4F5C9C5E2892512C00B19577 /* SecondsTimerStruct.swift in Sources */,
 				4FA7CA69288B212F0015B236 /* MainViewController.swift in Sources */,
 				4FA7CAA1288B35DC0015B236 /* ImagePicker.swift in Sources */,
 				4FA7CAA8288B43790015B236 /* SettingsView.swift in Sources */,
 				4FA7CA70288B21800015B236 /* HomescreenMainView.swift in Sources */,
 				4FA7CA6D288B21580015B236 /* FirebaseManager.swift in Sources */,
 				4FA7CA5B288B21010015B236 /* WorkoutApp4_0App.swift in Sources */,
+				4F6CB1A72894676D00EB6900 /* CircleLoadingBar.swift in Sources */,
 				4F2B92AB2890A33B007AB7B1 /* CoreSliderStruct.swift in Sources */,
 				4FA7CAAC288B6ACE0015B236 /* LoginView.swift in Sources */,
 				4FA7CAA6288B3F210015B236 /* StoreProfilePic.swift in Sources */,
+				4F6CB1D92898BA0000EB6900 /* ChooseSplitView.swift in Sources */,
 				4FA7CA84288B229B0015B236 /* CardioView.swift in Sources */,
 				4FA7CA76288B21DF0015B236 /* NutritionView.swift in Sources */,
+				4F5C9C602892555400B19577 /* SoundManager.swift in Sources */,
 				4FA7CA82288B22870015B236 /* AuthenticationView.swift in Sources */,
 				4FA7CA8E288B231D0015B236 /* TabStructs.swift in Sources */,
 				4F2B9297288F665C007AB7B1 /* SixPackShuffleGlobalArrays.swift in Sources */,

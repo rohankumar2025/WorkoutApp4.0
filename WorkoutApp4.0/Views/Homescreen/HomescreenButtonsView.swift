@@ -17,17 +17,18 @@ struct HomescreenButtonsView: View {
         VStack(spacing: 40) {
             HStack(spacing: 30) {
                 // Nutrition tab button
-                TabButton("Nutrition", iconName: "takeoutbag.and.cup.and.straw.fill", animationNamespace: self.animationNamespace, tabToOpen: Tab.nutritionView)
+                TabButton("Nutrition", iconName: "nutrition-tab", animationNamespace: self.animationNamespace, tabToOpen: .nutritionView, useSFSymbols: false)
                 
                 // Lifting tab button
-                TabButton("Lifting", iconName: "circle.fill", animationNamespace: self.animationNamespace, tabToOpen: Tab.liftingView)
+                TabButton("Lifting", iconName: "lifting-tab", animationNamespace: self.animationNamespace, tabToOpen: .liftingView, useSFSymbols: false)
             }
             HStack(spacing: 30) {
-                // Core tab button
-                TabButton("Core", iconName: "circle.fill", animationNamespace: self.animationNamespace, tabToOpen: Tab.coreView)
-                
                 // Cardio tab button
-                TabButton("Cardio", iconName: "circle.fill", animationNamespace: self.animationNamespace, tabToOpen: Tab.cardioView)            }
+                TabButton("Cardio", iconName: "cardio-tab", animationNamespace: self.animationNamespace, tabToOpen: .cardioView, useSFSymbols: false)
+            
+                // Core tab button
+                TabButton("Core", iconName: "core-tab", animationNamespace: self.animationNamespace, tabToOpen: .coreView, useSFSymbols: false)
+            }
             
         }
         .environmentObject(animations)

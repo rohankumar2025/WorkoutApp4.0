@@ -7,26 +7,10 @@
 
 import SwiftUI
 
-func getWorkoutFormat(_ workoutDifficulty: Double)-> (Int, Int, Int, Int) {
-    switch workoutDifficulty {
-    case 0:
-        return (30, 20, 7, 2)
-    case 1:
-        return (30, 20, 7, 3)
-    case 2:
-        return (40, 20, 7, 3)
-    case 3:
-        return (45, 15, 7, 3)
-    default:
-        return (50, 10, 7, 4)
-    }
-}
-
-
-
 struct CoreSliderStruct: View {
     @EnvironmentObject var profile: ProfileManager
-    @Binding var workoutDifficulty: Double
+    @EnvironmentObject var timerManager: TimerManager
+    @EnvironmentObject var workoutManager: CoreWorkoutManager
     
     var body: some View {
         ZStack {
@@ -36,21 +20,33 @@ struct CoreSliderStruct: View {
             
             VStack {
                 // Shows workout format based on slider
-                Text(getWorkoutText(workoutDifficulty: Int(self.workoutDifficulty)))
+                Text(workoutManager.getWorkoutText())
                     .font(.system(size: 12, weight: .semibold, design: .rounded))
                     .foregroundColor(.black.opacity(0.5))
                     .offset(y: 15)
                 
                 // Difficulty Slider
-                Slider(value: $workoutDifficulty, in: 0...4, step: 1)
-                    .tint(profile.preferredTheme)
-                    .frame(width: 300)
-                    .lineLimit(5)
-                    .offset(y: 10)
-                    
+                Slider(
+                    value: Binding(
+                        // Binds slider to workoutState.workoutDifficulty
+                        get: { workoutManager.workoutDifficulty },
+                        set: { newValue in
+                            // Updates workoutDifficulty and workoutFormat on change
+                            workoutManager.workoutDifficulty = newValue
+                            timerManager.setWorkout(workoutManager.getWorkoutFormat())
+                        }
+                    ),
+                    in: 0...4,
+                    step: 1)
+                        .tint(profile.preferredTheme)
+                        .frame(width: 300)
+                        .lineLimit(5)
+                        .offset(y: 10)
                 
                 // Shows difficulty level based on slider
-                Text("Difficulty: \(getDifficulty(workoutDifficulty: Int(self.workoutDifficulty)))")
+                let getDifficulty: Dictionary<Double, String> = [0: "Novice", 1: "Beginner", 2: "Intermediate", 3: "Expert", 4: "Elite"]
+
+                Text("Difficulty: \(getDifficulty[workoutManager.workoutDifficulty] ?? "")")
                     .font(.system(size: 12, weight: .semibold, design: .rounded))
                     .foregroundColor(.black.opacity(0.5))
                 
@@ -58,13 +54,14 @@ struct CoreSliderStruct: View {
         }
         .frame(width: 320, height: 90)
         .cornerRadius(20)
-        .offset(y: 130)
     }
 }
 
 struct CoreSliderStruct_Previews: PreviewProvider {
     static var previews: some View {
-        CoreSliderStruct(workoutDifficulty: .constant(2))
+        CoreSliderStruct()
             .environmentObject(ProfileManager())
+            .environmentObject(CoreWorkoutManager())
+            .environmentObject(TimerManager())
     }
 }

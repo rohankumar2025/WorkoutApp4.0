@@ -18,7 +18,7 @@ struct NutritionView: View {
                 
                 VStack(spacing: 30) {
                     // Header
-                    TabHeaderStruct("Nutrition", iconName: "takeoutbag.and.cup.and.straw.fill", animationNamespace: self.animationNamespace)
+                    TabHeaderStruct("Nutrition", iconName: "nutrition-tab", animationNamespace: self.animationNamespace, useSFSymbols: false)
                     
                     // Calorie Chart
                     CalorieChart()

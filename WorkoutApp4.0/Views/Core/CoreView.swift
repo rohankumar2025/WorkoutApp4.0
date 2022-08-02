@@ -7,36 +7,44 @@
 
 import SwiftUI
 
-import SwiftUI
+
 
 struct CoreView: View {
     @EnvironmentObject var animations: AnimationInfo
     @EnvironmentObject var profile: ProfileManager
+    @StateObject var workoutManager = CoreWorkoutManager()
+    @StateObject var timerManager = TimerManager()
     var animationNamespace: Namespace.ID
     
     var body: some View {
-        ZStack {
-            ScrollView {
-                
-                VStack(spacing: 30) {
-                    // Header
-                    TabHeaderStruct("Core", iconName: "circle.fill", animationNamespace: self.animationNamespace)
-                    
-                    SixPackShuffleStruct()
-                    
-                    Spacer()
-                    
+        Group {
+            if workoutManager.coreTabOpened == .mainTab {
+
+                ScrollView {
+                    VStack(spacing: 30) {
+                        // Header
+                        TabHeaderStruct("Core", iconName: "core-tab", animationNamespace: self.animationNamespace, useSFSymbols: false)
+                        
+                        // Six Pack Shuffle
+                        SixPackShuffleStruct(animationNamespace: self.animationNamespace)
+                            .onTapGesture {
+                                withAnimation(Animation.linear(duration: 0.2)) {
+                                    workoutManager.coreTabOpened = .sixPackShuffleTab
+                                }
+                            }
+                        Spacer()
+                        FooterView()
+                            .offset(y: UIScreen.main.bounds.height * 0.05)
+                    }
                 }
+                
+            } else {
+                // Full screen sixPackShuffleView
+                SixPackShuffleView(animationNamespace: self.animationNamespace)
             }
-            
-            VStack {
-                Spacer()
-                FooterView()
-            }
-            
-            
-            
         }
+        .environmentObject(workoutManager)
+        .environmentObject(timerManager)
         .environmentObject(animations)
         .environmentObject(profile)
     }
@@ -49,5 +57,6 @@ struct CoreView_Previews: PreviewProvider {
         CoreView(animationNamespace: namespace)
             .environmentObject(AnimationInfo())
             .environmentObject(ProfileManager())
+            .environmentObject(CoreWorkoutManager())
     }
 }

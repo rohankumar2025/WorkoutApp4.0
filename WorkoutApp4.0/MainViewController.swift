@@ -30,15 +30,15 @@ struct MainViewController: View {
         ZStack {
             if profile.isLoggedIn {
                 switch animations.tabOpened {
-                case Tab.nutritionView:
+                case .nutritionView:
                     NutritionView(animationNamespace: self.animationNamespace)
-                case Tab.liftingView:
+                case .liftingView:
                     LiftingView(animationNamespace: self.animationNamespace)
-                case Tab.cardioView:
+                case .cardioView:
                     CardioView(animationNamespace: self.animationNamespace)
-                case Tab.coreView:
+                case .coreView:
                     CoreView(animationNamespace: self.animationNamespace)
-                case Tab.settingsView:
+                case .settingsView:
                     SettingsView(animationNamespace: self.animationNamespace)
                 default:
                     HomescreenMainView(animationNamespace: self.animationNamespace)

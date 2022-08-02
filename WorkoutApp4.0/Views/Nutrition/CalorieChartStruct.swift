@@ -13,7 +13,8 @@ struct CalorieChart : View {
     @State private var mealEntryStr: String = ""
     
     var body: some View {
-        let degreesEaten = Double(profile.caloriesEatenHistory.last!) / Double(profile.maintenanceCalories) * 360 // Double value containing degrees of graph used by caloriesEaten
+        let caloriesEatenToday: Int = profile.caloriesEatenHistory.last ?? 0
+        let degreesEaten = Double(caloriesEatenToday) / Double(profile.maintenanceCalories) * 360 // Double value containing degrees of graph used by caloriesEaten
         
         VStack(alignment: .leading, spacing: 10) {
             Text("Calories")
@@ -44,7 +45,7 @@ struct CalorieChart : View {
                 // Text in middle of graph displaying calories left
                 VStack {
                     Spacer()
-                    Text("\( Int(profile.maintenanceCalories - profile.caloriesEatenHistory.last!) ) Calories Left")
+                    Text("\( Int(profile.maintenanceCalories - caloriesEatenToday )) Calories Left")
                         .font(.system(size: 25, weight: .semibold))
                         .foregroundColor(.black.opacity(0.5))
                         .padding()
@@ -85,9 +86,9 @@ struct CalorieChart : View {
         }
         mealEntryStr = ""
     }
-    
-    
 }
+    
+    
 
 
 
@@ -114,5 +115,13 @@ struct PieceOfPie : Shape {
             p.closeSubpath()
             
         }
+    }
+}
+    
+struct CalorieChart_Previews: PreviewProvider {
+    static var previews: some View {
+        CalorieChart()
+            .environmentObject(AnimationInfo())
+            .environmentObject(ProfileManager())
     }
 }
